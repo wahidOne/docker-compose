@@ -1,0 +1,27 @@
+#install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+#permission
+sudo chmod +x /usr/local/bin/docker-compose
+
+#version 
+docker-compose --version
+
+#membuat docker-compose file 
+docker-compose.yml
+
+#check validasi command docker
+docker-compose config
+
+#menjalankan docker-compose
+docker-compose up -d
+
+#menghentikan docker-compose
+docker-compose down
+
+#mengecek port dalam docker-compose
+curl localhost:'port'
+
+#TIPS scale servis (membuat banyak database dll)
+—scale
+docker-compose up -d --scale database=4
